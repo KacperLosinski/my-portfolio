@@ -12,6 +12,9 @@ module.exports = {
         primary: '#7CE5FF',
         secondary: '#508C9B',
         third: '#201E43',
+        buttonGradient1: '#7ce5ff',
+        buttonGradient2: '#00bafe',
+        buttonGradient3: '#c89ce8',
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(to top left, #201E43 79%, #0C2F47 100%)',
