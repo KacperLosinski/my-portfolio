@@ -15,6 +15,10 @@ module.exports = {
         buttonGradient1: '#7ce5ff',
         buttonGradient2: '#00bafe',
         buttonGradient3: '#c89ce8',
+        project1: "#519C92",
+        project2: "#51759C",
+        project3: "#515D9C",
+        project4: "#519C79",
       },
       backgroundImage: {
         'custom-gradient': 'linear-gradient(to top left, #201E43 79%, #0C2F47 100%)',

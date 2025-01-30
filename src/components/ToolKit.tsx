@@ -40,11 +40,11 @@ const ToolKit = () => {
       className="pt-[calc(var(--nav-height)+20px)] min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-darkBlue to-lightBlue text-white px-8 md:px-16"
     >
       {/* Nagłówek sekcji */}
-      <div className="md:text-left space-y-6 mb-10 text-left">
-        <h3 className="text-white text-xl sm:text-2xl font-semibold uppercase tracking-wide ml-2">
+      <div className="space-y-6 mb-10 text-left w-full max-w-3xl">
+        <h3 className="text-white text-xl sm:text-2xl font-semibold uppercase tracking-wide">
           <span className="text-primary">/</span> My Tool Kit
         </h3>
-        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold mt-2 ml-2">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold mt-2">
           My extensive list of tool kit
         </h2>
       </div>
@@ -66,7 +66,7 @@ const ToolKit = () => {
                   className="w-10 h-10 filter invert"
                 />
               ) : (
-                <FontAwesomeIcon icon={tool.icon} className="text-white text-3xl" />
+                <FontAwesomeIcon icon={tool.icon} className="text-white text-4xl" />
               )}
 
               {/* Tooltip */}

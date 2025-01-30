@@ -4,26 +4,12 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ToolKit from "@/components/ToolKit";
+import Projects from "@/components/projectsPortfolio";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 import Image from "next/image";
 import Script from "next/script";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHtml5,
-  faCss3Alt,
-  faJs,
-  faReact,
-  faNodeJs,
-  faFigma,
-  faGitAlt,
-  faBootstrap,
-} from "@fortawesome/free-brands-svg-icons";
-
-// Using custom SVG icons for MongoDB, Next.js, and TailwindCSS
-import nextJsIcon from "/public/icons/nextjs.svg";
-import mongoDbIcon from "/public/icons/mongodb.svg";
-import tailwindIcon from "/public/icons/tailwind.svg";
-import typeScriptIcon from "/public/icons/typescript.svg";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -56,7 +42,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-sans bg-custom-gradient min-h-screen">
+      <body className="font-sans bg-third min-h-screen">
         <Navbar />
 
         {/* Hero Section */}
@@ -101,10 +87,11 @@ export default function RootLayout({
             <h3 className="text-white text-xl sm:text-2xl font-semibold uppercase tracking-wide">
               <span className="text-primary">/</span> About Me
             </h3>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold leading-[1.3] md:leading-[1.5]">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold leading-[1.3] md:leading-[1.4]">
               I’ve been passionate about technology since childhood.
             </h2>
-            <p className="max-w-xl text-gray-300 text-sm md:text-base">
+       <div className="space-y-4">
+       <p className="max-w-xl text-gray-300 text-sm md:text-base">
               I’ve been studying frontend development since 2021 and am currently
               preparing to start my master’s degree in web development. I’m
               passionate about solving problems and embracing new challenges.
@@ -114,6 +101,7 @@ export default function RootLayout({
               my skills in crafting user-friendly and visually appealing digital
               experiences.
             </p>
+       </div>
           </div>
 
           {/* Right Column: Image + Decorations */}
@@ -134,9 +122,13 @@ export default function RootLayout({
         <section id="tool">
         <ToolKit />
         </section>
-  
-
-
+        <section id="projects">
+        <Projects />
+        </section>
+        <section id="contact">
+        <Contact />
+        </section>
+        <Footer />
         {children}
       </body>
     </html>
