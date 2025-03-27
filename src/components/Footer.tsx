@@ -9,13 +9,13 @@ const Footer = () => {
         {/* Contact Info */}
         <div className="footer-item">
           <FontAwesomeIcon icon={faPhone} className="icon" />
-          <p>Mon-Fri from 8am to 5pm</p>
+          <p>Mon-Fri from 9am to 6pm</p>
           <strong>+48 570591154</strong>
         </div>
 
         <div className="footer-item">
           <FontAwesomeIcon icon={faEnvelope} className="icon" />
-          <p>Our friendly team is here to help.</p>
+          <p>I am here to help.</p>
           <strong>kacper.losinski@gmail.com</strong>
         </div>
 

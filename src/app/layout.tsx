@@ -97,14 +97,16 @@ export default function RootLayout({
             </h2>
        <div className="space-y-4">
        <p className="max-w-xl text-gray-300 text-sm md:text-base">
-              I’ve been studying frontend development since 2021 and am currently
-              preparing to start my master’s degree in web development. I’m
-              passionate about solving problems and embracing new challenges.
+       I’ve been studying frontend development since 2021. 
+       I hold an Engineering degree in Computer Science and 
+       am currently pursuing a Master’s degree with a focus 
+       on web development. I’m passionate about solving problems 
+       and embracing new challenges.
             </p>
             <p className="max-w-xl text-gray-300 text-sm md:text-base">
-              I thrive in creative environments and continuously strive to enhance
-              my skills in crafting user-friendly and visually appealing digital
-              experiences.
+            I thrive in creative environments and continuously 
+            strive to improve my skills in building user-friendly 
+            and visually engaging digital experiences.
             </p>
        </div>
           </div>
@@ -113,14 +115,10 @@ export default function RootLayout({
           <div className="relative mt-12 md:mt-0 flex justify-center">
             <div className="relative w-[280px] sm:w-[320px] md:w-[400px]">
               <img
-                src={`${basePath}/images/avatar.jpg`}
+                src={`${basePath}/images/photoofmyself.png`}
                 alt="Profile"
-                className="rounded-lg shadow-lg"
+                className="drop-shadow-[0_8px_20px_rgba(0,0,0,0.9)]"
               />
-              <div className="absolute bottom-3 left-3 bg-black/70 text-white text-xs px-3 py-1 rounded flex items-center">
-                <img src={`${basePath}/images/adobe-firefly-icon.png`} alt="Adobe Firefly" className="h-4 w-4 mr-2"/>
-                Adobe Firefly
-              </div>
             </div>
           </div>
         </section>
