@@ -21,7 +21,7 @@ const Footer = () => {
 
         <div className="footer-item">
           <FontAwesomeIcon icon={faLocationDot} className="icon" />
-          <p>Poland</p>
+          <p>Poland, Pomeranian</p>
           <strong>Gdańsk</strong>
         </div>
       </div>

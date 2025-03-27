@@ -23,7 +23,7 @@ const projects = [
   },
   {
     title: "Cocktail-App",
-    description: "Cocktail recipe app developed as my thesis project. Features include ingredient-based search, user authentication, adding custom recipes, favoriting, commenting, and rating others' creations.",
+    description: "App developed as my thesis project, with ingredient-based search, user login, custom recipes, favorites, comments, and ratings.",
     technologies: ["React", "Node.js", "JavaScript", "CSS", "Firebase", "MongoDB", "Render"  ],
     bgColor: "bg-project4",
   },
@@ -58,13 +58,19 @@ const Projects = () => {
             <div className="absolute inset-0 bg-black/85 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex flex-col items-center justify-center p-4 text-center">
               <h3 className="text-xl font-bold">{project.title}</h3>
               <p className="text-sm text-gray-300 mt-2">{project.description}</p>
-              <div className="flex gap-2 mt-3">
-                {project.technologies.map((tech, techIndex) => (
-                  <span key={techIndex} className="bg-white text-black text-xs px-3 py-1 rounded-md">
-                    {tech}
-                  </span>
-                ))}
-              </div>
+              <div
+  className={`mt-3 flex flex-wrap justify-center gap-2 text-center ${
+    project.technologies.length > 4 ? "lg:flex-nowrap" : ""
+  }`}
+>
+
+  {project.technologies.map((tech, techIndex) => (
+    <span key={techIndex} className="bg-white text-black text-xs px-3 py-1 rounded-md">
+      {tech}
+    </span>
+  ))}
+</div>
+
             </div>
           </div>
         ))}
