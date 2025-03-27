@@ -5,26 +5,26 @@ import React from "react";
 const projects = [
   {
     title: "O.Robotics",
-    description: "A simple, responsive landing page built with Tailwind CSS, designed to showcase services with a modern and clean layout.",
-    technologies: ["HTML5", "TailwindCSS", "React"],
+    description: "A simple, responsive landing page built with Bootstrap, designed to showcase services with a modern and clean layout.",
+    technologies: ["HTML5", "Bootstrap", "JavaScript"],
     bgColor: "bg-project1",
   },
   {
-    title: "Phone App",
-    description: "A mobile app interface designed for smooth UX and high performance.",
-    technologies: ["React Native", "Expo"],
+    title: "Weather App",
+    description: "Weather app with dynamic backgrounds based on weather and time of day.",
+    technologies: ["Next.js", "API", "CSS", "TypeScript"],
     bgColor: "bg-project2",
   },
   {
-    title: "Tablet UI",
-    description: "A dashboard for managing and tracking tasks efficiently.",
-    technologies: ["Next.js", "TypeScript"],
+    title: "Arthrohard",
+    description: "One-page website for a recruitment task, focused on responsive design.",
+    technologies: ["HTML", "CSS", "JavaScript"],
     bgColor: "bg-project3",
   },
   {
-    title: "Laptop Dashboard",
-    description: "An advanced analytics dashboard for data visualization.",
-    technologies: ["Vue.js", "Chart.js"],
+    title: "Cocktail-App",
+    description: "Cocktail recipe app developed as my thesis project. Features include ingredient-based search, user authentication, adding custom recipes, favoriting, commenting, and rating others' creations.",
+    technologies: ["React", "Node.js", "JavaScript", "CSS", "Firebase", "MongoDB", "Render"  ],
     bgColor: "bg-project4",
   },
 ];
