@@ -1,17 +1,17 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "/my-portfolio",
-  assetPrefix: "/my-portfolio",
+  output: 'export',
+  basePath: '/my-portfolio',
+  assetPrefix: '/my-portfolio',
   images: {
     unoptimized: true,
-    domains: ["localhost"],
-    formats: ["image/avif", "image/webp"],
+    domains: ['localhost'],
+    formats: ['image/avif', 'image/webp'],
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
-};
+}
 
-export default nextConfig; // <--- to jest KLUCZOWE
+export default nextConfig
