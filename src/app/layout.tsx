@@ -104,7 +104,7 @@ export default function RootLayout({
             <p className="max-w-xl text-gray-300 text-sm md:text-base">
               I thrive in creative environments and continuously strive to enhance
               my skills in crafting user-friendly and visually appealing digital
-              experiences..
+              experiences.
             </p>
        </div>
           </div>
