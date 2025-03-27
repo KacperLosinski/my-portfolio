@@ -1,6 +1,12 @@
 "use client";
 
 import React from "react";
+import getConfig from "next/config";
+
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/my-portfolio" : "";
+
+
 
 const projects = [
   {
@@ -61,7 +67,7 @@ const Projects = () => {
           className={`relative group ${index === 0 || index === 3 ? "lg:col-span-2" : "lg:col-span-1"} lg:row-span-1 h-48 sm:h-56 md:h-72 ${project.bgColor} rounded-xl flex items-center justify-center shadow-lg cursor-pointer transition-all hover:scale-105 overflow-hidden`}
         >
           <img
-            src={project.imageSrc}
+            src={`${basePath}${project.imageSrc}`}
             alt={`${project.title} mockup`}
             className={`max-h-[70%] max-w-[60%] object-contain transition-transform duration-300 group-hover:scale-105 pointer-events-none ${
             index === 0 || index === 3 ? "drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]" : ""

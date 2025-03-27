@@ -6,6 +6,7 @@ import ToolKit from "@/components/ToolKit";
 import Projects from "@/components/projectsPortfolio";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Rocket from "@/components/Rocket";
 
 import Image from "next/image";
 import Script from "next/script";
@@ -132,6 +133,7 @@ export default function RootLayout({
         <Contact />
         </section>
         <Footer />
+        
         {children}
       </body>
     </html>
