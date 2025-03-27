@@ -1,6 +1,5 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import ToolKit from "@/components/ToolKit";
@@ -10,6 +9,12 @@ import Footer from "@/components/Footer";
 
 import Image from "next/image";
 import Script from "next/script";
+import getConfig from "next/config";
+
+const { publicRuntimeConfig } = getConfig();
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/my-portfolio" : "";
+
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -68,7 +73,7 @@ export default function RootLayout({
           {/* Right Column: Image */}
           <div className="mt-8 md:mt-0">
             <Image
-              src="/images/avatar.jpg"
+              src={`${basePath}/images/avatar.jpg`}
               alt="Profile"
               width={320}
               height={320}
@@ -108,12 +113,12 @@ export default function RootLayout({
           <div className="relative mt-12 md:mt-0 flex justify-center">
             <div className="relative w-[280px] sm:w-[320px] md:w-[400px]">
               <img
-                src="/images/avatar.jpg"
+                src={`${basePath}/images/avatar.jpg`}
                 alt="Profile"
                 className="rounded-lg shadow-lg"
               />
               <div className="absolute bottom-3 left-3 bg-black/70 text-white text-xs px-3 py-1 rounded flex items-center">
-                <img src="/images/adobe-firefly-icon.png" alt="Adobe Firefly" className="h-4 w-4 mr-2" />
+                <img src={`${basePath}/images/adobe-firefly-icon.png`} alt="Adobe Firefly" className="h-4 w-4 mr-2"/>
                 Adobe Firefly
               </div>
             </div>
