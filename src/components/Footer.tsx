@@ -28,13 +28,13 @@ const Footer = () => {
 
       {/* Social Media */}
       <div className="social-icons">
-        <a href="https://messenger.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://m.me/kacperlosiulosinski/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faFacebookMessenger} className="icon hover-effect" />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/kacper-%C5%82osi%C5%84ski-51997a243/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} className="icon hover-effect" />
         </a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/KacperLosinski/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} className="icon hover-effect" />
         </a>
       </div>

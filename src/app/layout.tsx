@@ -85,7 +85,7 @@ export default function RootLayout({
         {/* About Me Section */}
         <section
           id="about"
-          className="pt-[calc(var(--nav-height)+20px)] min-h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-br from-darkBlue to-lightBlue text-white px-8 md:px-16 relative"
+          className="pt-[calc(var(--nav-height)+20px)] min-h-screen flex flex-col sm:flex-row items-center justify-center bg-gradient-to-br from-darkBlue to-lightBlue text-white px-8 md:px-16 relative"
         >
           {/* Left Column: Text */}
           <div className="max-w-3xl text-center md:text-left space-y-6 md:mr-16 lg:mr-24">
