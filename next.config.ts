@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   output: "export",
   basePath: "/my-portfolio",
   assetPrefix: "/my-portfolio",
@@ -13,5 +14,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
-
+export default nextConfig; // <--- to jest KLUCZOWE
