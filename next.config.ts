@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: "export", 
-  assetPrefix: "/my-portfolio",
   images: {
     unoptimized: true, 
     domains: ['localhost'],
@@ -11,9 +10,7 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  publicRuntimeConfig: {
-    basePath: "/my-portfolio",
-  },
+
 };
 
 export default nextConfig;
