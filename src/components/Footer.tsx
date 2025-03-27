@@ -21,8 +21,8 @@ const Footer = () => {
 
         <div className="footer-item">
           <FontAwesomeIcon icon={faLocationDot} className="icon" />
-          <p>Come say hello at our office HQ.</p>
-          <strong>2076 DN Avenue Tallahassee, FL 32301</strong>
+          <p>Poland</p>
+          <strong>Gdańsk</strong>
         </div>
       </div>
 
