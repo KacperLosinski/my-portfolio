@@ -53,7 +53,7 @@ const Navbar = () => {
           <div className="text-2xl sm:text-3xl font-semibold whitespace-nowrap">
             <a href="#" className="flex items-center">
               <span className="material-icons pr-2 !text-4xl sm:!text-5xl text-secondary hover:text-primary">
-                gamepad
+                language
               </span>
               Kacpe.
             </a>
