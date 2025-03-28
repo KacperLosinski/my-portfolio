@@ -4,6 +4,10 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import getConfig from "next/config";
+
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/my-portfolio" : "";
 
 gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
@@ -31,7 +35,7 @@ const Rocket = () => {
       {/* Rakieta */}
       <img
         id="rocket"
-        src="/images/rocket.png"
+        src={`${basePath}/images/rocket.png`}
         alt="rocket"
         className="fixed top-0 left-0 w-32 md:w-40 lg:w-64 xl:w-96 -z-50 pointer-events-none"
       />
