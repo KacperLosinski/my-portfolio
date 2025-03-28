@@ -7,6 +7,7 @@ import Projects from "@/components/projectsPortfolio";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Rocket from "@/components/Rocket";
+import SmoothScroll from "@/components/SmoothScroll";
 
 import Image from "next/image";
 import Script from "next/script";
@@ -39,6 +40,11 @@ export default function RootLayout({
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        <Script
+        src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.38/bundled/lenis.min.js"
+        strategy="afterInteractive"
+        />
+
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet"
@@ -133,6 +139,7 @@ export default function RootLayout({
         <Contact />
         </section>
         <Rocket />
+        <SmoothScroll />
         <Footer />
         {children}
       </body>
