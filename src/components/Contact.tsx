@@ -4,9 +4,34 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import Loader from "./Loader";
+import SuccessPopup from "./SuccessPopup"; // ścieżka zależna od lokalizacji
+
 
 const ContactSection = () => {
   const [isModalOpen, setModalOpen] = useState(false);
+  const [isSent, setIsSent] = useState(false);
+
+const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+  const form = e.currentTarget;
+
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { Accept: "application/json" },
+  })
+    .then((res) => {
+      if (res.ok) {
+        setIsSent(true);
+        form.reset();
+        setTimeout(() => setIsSent(false), 4000);
+      }
+    })
+    .catch((err) => {
+      console.error("Form error:", err);
+    });
+};
+
 
   return (
     <section className="contact-section py-20">
@@ -37,31 +62,63 @@ const ContactSection = () => {
     <div className="modal-content relative bg-white p-6 rounded-lg shadow-lg max-w-[450px] border-2 border-transparent bg-gradient-to-br from-[#201E43] to-[#201E43]">
       <button className="close-btn absolute top-2 right-4 text-gray-300 text-xl" onClick={() => setModalOpen(false)}>✖</button>
       
-      {/* Formularz w obramówce */}
-      <div className="form-container">
-        <form className="form">
-          <div className="form-group">
-            <label>Full Name</label>
-            <input type="text" placeholder="Enter your name" required />
-          </div>
-          <div className="form-group">
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email" required />
-          </div>
-          <div className="form-group">
-            <label>Subject</label>
-            <input type="text" placeholder="Enter subject" required />
-          </div>
-          <div className="form-group">
-            <label>Message</label>
-            <textarea placeholder="Write your message" rows={4} required></textarea>
-          </div>
-          <button type="submit" className="form-submit-btn">
-            <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
-            Send Message
-          </button>
-        </form>
-      </div>
+{/* Formularz w obramówce */}
+<div className="form-container">
+  {/* ✅ POPUP po wysłaniu */}
+  {isSent && (
+    <SuccessPopup message="Message sent successfully!" />
+  )}
+
+  <form
+    className="form"
+    action="https://formspree.io/f/mgvalvgq"
+    method="POST"
+    onSubmit={handleSubmit}
+  >
+    <div className="form-group">
+      <label>Full Name</label>
+      <input
+        type="text"
+        name="name"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+    <div className="form-group">
+      <label>Email</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+      />
+    </div>
+    <div className="form-group">
+      <label>Subject</label>
+      <input
+        type="text"
+        name="subject"
+        placeholder="Enter subject"
+        required
+      />
+    </div>
+    <div className="form-group">
+      <label>Message</label>
+      <textarea
+        name="message"
+        placeholder="Write your message"
+        rows={4}
+        required
+      ></textarea>
+    </div>
+    <button type="submit" className="form-submit-btn">
+      <FontAwesomeIcon icon={faPaperPlane} className="mr-2" />
+      Send Message
+    </button>
+  </form>
+</div>
+
+
     </div>
   </div>
 )}
