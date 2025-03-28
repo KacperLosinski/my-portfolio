@@ -132,8 +132,8 @@ export default function RootLayout({
         <section id="contact">
         <Contact />
         </section>
+        <Rocket />
         <Footer />
-        
         {children}
       </body>
     </html>
