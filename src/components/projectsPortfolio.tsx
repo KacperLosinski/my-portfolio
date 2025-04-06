@@ -39,7 +39,7 @@ const projects = [
     technologies: ["HTML", "Bootstrap", "JavaScript"],
     bgColor: "bg-project1",
     imageSrc: "/mockups/o.robotics-mockup.png",
-    liveLink: "https://kacperlosinski.github.io/o.robotics/",
+    liveLink: "https://o-robotics.pl/",
   },
 ];
 
